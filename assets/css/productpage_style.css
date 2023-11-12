@@ -1,0 +1,164 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    display: unset;
+}
+
+header article {
+    height: 200px;
+    border-style: solid;
+    text-align: center;
+    font-size: 100px;
+}
+
+header h1 {
+    color: rgb(107, 162, 146);
+}
+
+
+nav {
+    display: flex;
+    /* Makes list horizontal */
+    position: sticky;
+    top: 0;
+    height: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    align-items: center;
+    justify-content: space-between;
+    /* For seperating list */
+
+    margin-bottom: 55px;
+    background-color: rgb(6, 123, 135);
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li {
+    margin: 0px;
+    padding: 25px;
+
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    list-style: none;
+
+
+}
+
+nav li:hover {
+    color: rgb(223, 222, 222);
+}
+
+main {
+    width: 1000px;
+    min-width: 950px;
+    margin: 0 auto;
+    padding: 50px 80px;
+    background-color: rgb(255, 255, 255);
+}
+
+#product {
+    display: flex;
+    justify-content: center;
+}
+
+#product-images {
+    padding: 20px;
+    height: 300px;
+    width: 300px;
+    background-color: rgb(63, 53, 94);
+}
+
+
+#product-images img {
+    width: 300px;
+    height: 290px;
+}
+
+
+#product-details {
+    margin-left: 40px;
+    margin-right: 15px;
+    width: 400px;
+}
+
+#it-title {
+    font-size: 30px;
+}
+
+#saving {
+    text-align: center;
+    box-sizing: border-box;
+    margin-right: 0px;
+    padding: 25px;
+    width: 300px;
+    height: 250px;
+    background-color: rgb(246, 246, 246);
+    border: 5px double black;
+}
+
+.save {
+    display: block;
+    margin: 5px 0;
+    padding: 8px;
+    width: 100%;
+    color: rgb(4, 4, 4);
+    background-color: rgb(255, 236, 179);
+    border: 2px outset black;
+    border-radius: 5px;
+}
+
+.back {
+    display: block;
+    margin: 5px 0;
+    padding: 8px;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background-color: rgb(56, 174, 234);
+    border: 2px outset black;
+    border-radius: 5px;
+}
+
+#history {
+    margin-bottom: 50px;
+}
+
+#hislist {
+    margin-right: 50px;
+    padding: 15px;
+    background-color: rgb(63, 53, 94);
+}
+
+.user-history {
+    margin-bottom: 50px;
+    padding: 25px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.user-profile {
+    text-align: left;
+}
+
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(107, 162, 146);
+    color: white;
+    height: 50px;
+    width: 100%;
+}
