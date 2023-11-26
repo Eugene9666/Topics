@@ -19,12 +19,13 @@ from myapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.login),
+    path('',views.login,name="login"),
     path('Tgoods/',views.Tgoods, name="Tgoods"),    
     path('Tdaily/',views.Tdaily,name="Tdaily"),
-    path('Ttransfer',views.Ttransfer,name="Ttransfer"),
-    path('Tclient',views.Tclient,name='Tclient'),
+    path('Ttransfer/',views.Ttransfer,name="Ttransfer"),
+    path('Tclient/',views.Tclient,name='Tclient'),
     path('logout/',views.logout),
+    path('regist/',views.regist,name='regist'),
 ]
 
 
