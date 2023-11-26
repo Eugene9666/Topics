@@ -6,8 +6,6 @@ from django.db.models import Sum
 # Create your views here.
 def login(request):
     if request.method == "POST":
-        print(request.POST)
-        print(request.POST.get('submit'))
         if request.POST.get('submit') == 'login':
             userName = request.POST['username']
             password = request.POST['password']
@@ -18,9 +16,22 @@ def login(request):
                 return redirect(Tgoods)
             else:
                 return HttpResponse('Please enter valid Username or Password.')
-    else:
-        print("\n\n\n沒有posted")
     return render(request,'login.html')
+
+def regist(request):
+    if request.method == "POST":
+        if request.POST.get('submit') == 'regist':
+            userName = request.POST['username']
+            password = request.POST['password']
+            repassword = request.POST['repassword']
+            Name = request.POST['name']
+            if password == repassword:
+                user = Login(userName = userName, password = password, Name = Name)
+                user.save()
+                return redirect('/')
+            else:  
+                return HttpResponse('密碼不一樣')
+    return render(request,'regist.html')
 
 def Tgoods(request):
     if 'user' in request.session:
@@ -32,7 +43,6 @@ def Tgoods(request):
             purchase_sum = DailyInOut.objects.filter(productId=good.productId).aggregate(total_purchase_quantity=Sum('purchaseQuantity')) 
             export_sum = DailyInOut.objects.filter(productId=good.productId).aggregate(total_export_quantity=Sum('exportQuantity'))  
             transfers = Transfer.objects.filter(productId=good.productId)
-
             positions = []
             for transfer in transfers:
                 if transfer.position1:
@@ -73,6 +83,5 @@ def Tclient(request):
         current_user = request.session['user']
         clients = Client.objects.all()
     return render(request,'Tclient.html',locals())
-
 
 
