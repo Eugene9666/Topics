@@ -26,12 +26,14 @@
       <label for="floatingInput">帳號</label>
     </div>
     <div class="form-floating">
-      <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="輸入密碼">
       <label for="floatingPassword">密碼</label>
     </div>
 
     <button class="btn btn-primary w-100 py-2" type="submit" value="login" name="submit">登入</button>
   </form>
+  <br>
+  <a href="{% url 'regist' %}">註冊</a>
 </main>
     </body>
 </html>
