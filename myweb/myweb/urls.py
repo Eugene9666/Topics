@@ -26,6 +26,10 @@ urlpatterns = [
     path('Tclient/',views.Tclient,name='Tclient'),
     path('logout/',views.logout),
     path('regist/',views.regist,name='regist'),
+    path('searchGoods/',views.searchGoods,name="searchGoods"),
+    path('searchDaily/',views.searchDaily,name="searchDaily"),
+    path('searchClient/',views.searchClient,name="searchClient"),
+    path('searchTransfer/',views.searchTransfer,name="searchTransfer"),
 ]
 
 
